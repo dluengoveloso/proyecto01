@@ -1,6 +1,6 @@
 package cl.delv.inicial.proyecto01.web;
 
-import cl.delv.inicial.proyecto01.dto.UploadExerciseResponseDTO;
+import cl.delv.inicial.proyecto01.dto.ExerciseResponseDTO;
 import cl.delv.inicial.proyecto01.dto.UploadRequestDTO;
 import cl.delv.inicial.proyecto01.service.UploadService;
 import org.springframework.http.MediaType;
@@ -18,11 +18,15 @@ public class Proyecto01Controller {
         this.uploadService = uploadService;
     }
 
-    @PutMapping(value = "/new-doc", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public UploadExerciseResponseDTO uploadExercises(@RequestBody UploadRequestDTO request) {
+    @PutMapping(value = "/new-exercise", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ExerciseResponseDTO uploadExercises(@RequestBody UploadRequestDTO request) {
 
         System.out.println("paso");
 
         return uploadService.newExercise(request);
     }
+
+//    public ExerciseResponseDTO deleteExercises(@RequestBody DeleteRequestDTO request){
+//
+//    }
 }

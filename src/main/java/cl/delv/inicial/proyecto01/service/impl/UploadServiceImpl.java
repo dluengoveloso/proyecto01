@@ -1,6 +1,6 @@
 package cl.delv.inicial.proyecto01.service.impl;
 
-import cl.delv.inicial.proyecto01.dto.UploadExerciseResponseDTO;
+import cl.delv.inicial.proyecto01.dto.ExerciseResponseDTO;
 import cl.delv.inicial.proyecto01.dto.UploadRequestDTO;
 import cl.delv.inicial.proyecto01.mappers.DataMapper;
 import cl.delv.inicial.proyecto01.service.DataService;
@@ -20,9 +20,10 @@ public class UploadServiceImpl implements UploadService {
     }
 
     @Override
-    public UploadExerciseResponseDTO newExercise(UploadRequestDTO request) {
-        UploadExerciseResponseDTO response = new UploadExerciseResponseDTO();
+    public ExerciseResponseDTO newExercise(UploadRequestDTO request) {
+        ExerciseResponseDTO response = new ExerciseResponseDTO();
         UploadDataRequestVO requestVO = new UploadDataRequestVO();
+
         //set a lo antiguo
         requestVO.setName(request.getRequest().getName());
         requestVO.setCategory(request.getRequest().getCategory());

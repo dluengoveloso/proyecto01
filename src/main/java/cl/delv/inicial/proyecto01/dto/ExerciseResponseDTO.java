@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UploadExerciseResponseDTO {
+public class ExerciseResponseDTO {
     @JsonProperty(value = "code")
     private String code;
     @JsonProperty(value = "description")

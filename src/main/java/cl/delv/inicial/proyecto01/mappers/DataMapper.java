@@ -8,6 +8,6 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface DataMapper {
-    DataMapper INSTANCE = Mappers.getMapper( DataMapper.class );
+  //  DataMapper INSTANCE = Mappers.getMapper( DataMapper.class );
     UploadDataRequestVO uploadExerciseRequestDTOtoVO(UploadExerciseRequestDTO p);
 }
